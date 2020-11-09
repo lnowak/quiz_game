@@ -14,13 +14,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .welcomeScreen {
-  height: 80%;
+  height: 100%;
   width: 60%;
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,7 +26,7 @@
 }
 
 .welcomeScreen__name {
-  height: 100px;
+  height: 1px;
   width: 300px;
   margin-left: -68px;
 }
@@ -53,12 +51,38 @@ text {
   width: 200px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -130px;
+  margin-top: -15px;
+}
+
+.welcomeScreen__chooseMenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 700px;
+  height: 220px;
+  flex-wrap: wrap;
+}
+
+.welcomeScreen__chooseMenu__button {
+  height: 50px;
+  width: 110px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .welcomeScreen__button {
   height: 50px;
   width: 250px;
   font-size: 25px;
-  background-color: transparent;
+  background-color: rgba(11, 51, 230, 0.267);
+  border: none;
+  outline-color:  rgba(6, 37, 173, 0.438);
+  cursor: pointer;
+}
+
+.welcomeScreen__button:hover {
+  background-color: rgba(11, 51, 230, 0.568);
+  color: rgb(255, 255, 255);
 }

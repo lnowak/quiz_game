@@ -1,19 +1,27 @@
-import {useState} from 'react';
-
+import {useState, useEffect} from 'react';
 
 import './App.css';
-
 
 import WelcomeScreen from './Components/WelcomeScreen';
 import MainScreen from './Components/MainScreen'
 
 function App() {
 
-  const [mainActive, setmainActive] = useState(false)
+  const [categories, setCategories] = useState(false);
+
+  useEffect(() => {
+    fetch("https://opentdb.com/api_category.php")
+    .then(resp => {
+      return resp.json();
+    })
+    .then(data => {
+      setCategories(data)
+    })
+  }, [])
 
   return (
     <div className="App">
-      <WelcomeScreen />
+      <WelcomeScreen categories={categories} />
       <MainScreen />
     </div>
   );
