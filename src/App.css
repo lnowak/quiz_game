@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.welcomeScreen {
+.choiceScreen {
   height: 85%;
   width: 60%;
   display: flex;
@@ -25,13 +25,13 @@
   align-items: center;
 }
 
-.welcomeScreen__name {
+.choiceScreen__name {
   height: 1px;
   width: 300px;
   margin-left: -68px;
 }
 
-.welcomeScreen__name svg {
+.choiceScreen__name svg {
   height: 400px;
 }
 
@@ -59,7 +59,7 @@ text {
   font-size: 30px;
 }
 
-.welcomeScreen__chooseMenu {
+.choiceScreen__chooseMenu {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -68,7 +68,7 @@ text {
   flex-wrap: wrap;
 }
 
-.welcomeScreen__chooseMenu__button {
+.choiceScreen__chooseMenu__button {
   height: 50px;
   width: 110px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -78,17 +78,17 @@ text {
   cursor: pointer;
 }
 
-.welcomeScreen__chooseMenu__button:hover {
+.choiceScreen__chooseMenu__button:hover {
   background-color: rgba(3, 83, 3, 0.76);
   color: rgb(0, 0, 0);
 }
 
-.welcomeScreen__chooseMenu__button--checked{
+.choiceScreen__chooseMenu__button--checked{
   background-color: rgb(12, 129, 12);
   color: rgb(255, 255, 255);
 }
 
-.welcomeScreen__button {
+.choiceScreen__button {
   height: 50px;
   width: 250px;
   font-size: 25px;
@@ -104,12 +104,12 @@ text {
   100% {transform: scale(1);}
 }
 
-.welcomeScreen__button:hover {
+.choiceScreen__button:hover {
   background-color: rgba(0, 0, 0, 0.568);
   color: rgb(255, 255, 255);
 }
 
-.welcomeScreen__button--hidden {
+.choiceScreen__button--hidden {
   height: 50px;
   width: 250px;
   background: transparent;

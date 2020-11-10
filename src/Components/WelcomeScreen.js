@@ -13,7 +13,7 @@ const WelcomeScreen = ({categories, setChosenCategory, chosenCategory}) => {
     }
 
     return (
-        <div className='welcomeScreen'>
+        <div className='welcomeScreen' style={{display: 'none'}}>
             <div className='welcomeScreen__name'>
                 <svg viewBox="0 0 500 500">
                     <path id="curve" d="M72.2,148.6c4-6.1,65.5-6.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />

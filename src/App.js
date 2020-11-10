@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import './App.css';
 
 import WelcomeScreen from './Components/WelcomeScreen';
+import ChoiceScreen from './Components/ChoiceScreen'
 import MainScreen from './Components/MainScreen'
 
 function App() {
@@ -29,11 +30,14 @@ function App() {
     .then(data => {
       setQuestions(data)
     })
-  }, [chosenCategory])
+  }, [chosenCategory]);
+
   console.log(questions);
+
   return (
     <div className="App">
-      <WelcomeScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory}/>
+      <WelcomeScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
+      <ChoiceScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
       <MainScreen />
     </div>
   );
