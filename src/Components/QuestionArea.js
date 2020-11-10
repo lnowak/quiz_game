@@ -1,6 +1,12 @@
 const QuestionArea = ({que, index, pageNo, setPageNo}) => {
 
-    console.log(index, que)
+    // console.log(index, que)
+    const encode = mystring => {
+        console.log(mystring)
+        return mystring.replace(/&quot;/g, /"/);
+    }
+    encode(que.question);
+    console.log(que.question);
     return (
         <div className={index === pageNo ? '' : 'hidden'}>
             <p>{que.question}</p>
