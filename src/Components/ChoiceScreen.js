@@ -1,4 +1,4 @@
-const ChoiceScreen = ({categories, setChosenCategory, chosenCategory}) => {
+const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenActive, setIsScreenActive}) => {
 
     const chooseCategory = e => {
         setChosenCategory(e.target.dataset.id);
@@ -10,8 +10,8 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory}) => {
     }
 
     return (
-        <div className='choiceScreen'>
-            <div className='choiceScreen__name'>
+        <div className={isScreenActive === 2 ? 'choiceScreen' : 'hidden'}>
+            <div className='screen__name'>
                 <svg viewBox="0 0 500 500">
                     <path id="curve" d="M72.2,148.6c4-6.1,65.5-6.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
                     <text className='lkl' width="500">
@@ -26,7 +26,7 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory}) => {
             <div className='choiceScreen__chooseMenu'>
                 {category_buttons}
             </div>
-            <button className={chosenCategory ? 'choiceScreen__button' : 'choiceScreen__button--hidden'} disabled={chosenCategory ? false : true} >Play</button>
+            <button className={chosenCategory ? 'choiceScreen__button button' : 'choiceScreen__button--hidden'} disabled={chosenCategory ? false : true} onClick={() => {setIsScreenActive(3)}}>Play</button>
         </div>
     )
 }

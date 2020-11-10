@@ -11,6 +11,7 @@ function App() {
   const [categories, setCategories] = useState(false);
   const [chosenCategory, setChosenCategory] = useState(false);
   const [questions, setQuestions] = useState(false)
+  const [isScreenActive, setIsScreenActive] = useState(1);
 
   useEffect(() => {
     fetch("https://opentdb.com/api_category.php")
@@ -32,13 +33,13 @@ function App() {
     })
   }, [chosenCategory]);
 
-  console.log(questions);
+  // console.log(questions);
 
   return (
     <div className="App">
-      <WelcomeScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
-      <ChoiceScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
-      <MainScreen />
+      <WelcomeScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive}/>
+      <ChoiceScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
+      <MainScreen isScreenActive={isScreenActive} />
     </div>
   );
 }

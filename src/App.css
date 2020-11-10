@@ -16,6 +16,51 @@
   align-items: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.welcomeScreen {
+  height: 85%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen__name {
+  height: 1px;
+  width: 300px;
+  margin-left: -68px;
+}
+
+.welcomeScreen__name {
+  transform: scale(1.5);
+}
+
+.welcome__logo {
+  transform: scale(1.5);
+}
+
+.button {
+  height: 50px;
+  width: 250px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.welcomeScreen__button {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.397);
+  outline-color:  rgba(6, 37, 173, 0.438);
+}
+
+.welcomeScreen__button:hover {
+  background-color: rgba(0, 0, 0, 0.568);
+  color: rgb(255, 255, 255);
+}
+
 .choiceScreen {
   height: 85%;
   width: 60%;
@@ -25,13 +70,7 @@
   align-items: center;
 }
 
-.choiceScreen__name {
-  height: 1px;
-  width: 300px;
-  margin-left: -68px;
-}
-
-.choiceScreen__name svg {
+.screen__name svg {
   height: 400px;
 }
 
@@ -57,6 +96,13 @@ text {
 .categoryPick {
   margin: -40px 0 -40px 0;
   font-size: 30px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {color: rgb(209, 209, 209);}
+  50% {color: rgb(0, 0, 0);}
+  100% {color: rgb(209, 209, 209);}
 }
 
 .choiceScreen__chooseMenu {
@@ -89,13 +135,8 @@ text {
 }
 
 .choiceScreen__button {
-  height: 50px;
-  width: 250px;
-  font-size: 25px;
   background-color: rgba(0, 0, 0, 0.397);
-  border: none;
   outline-color:  rgba(6, 37, 173, 0.438);
-  cursor: pointer;
   animation: appear 0.4s;
 }
 
