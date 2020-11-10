@@ -8,6 +8,7 @@ import MainScreen from './Components/MainScreen'
 function App() {
 
   const [categories, setCategories] = useState(false);
+  const [chosenCategory, setChosenCategory] = useState(false);
 
   useEffect(() => {
     fetch("https://opentdb.com/api_category.php")
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <WelcomeScreen categories={categories} />
+      <WelcomeScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory}/>
       <MainScreen />
     </div>
   );

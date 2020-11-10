@@ -1,17 +1,15 @@
 import React, {useState} from 'react';
 
 
-const WelcomeScreen = ({categories}) => {
+const WelcomeScreen = ({categories, setChosenCategory, chosenCategory}) => {
 
-    const [checked, setChecked] = useState(false)
-
-    const categoryChoose = () => {
-        setChecked(true)
+    const chooseCategory = e => {
+        setChosenCategory(e.target.dataset.id);
     }
 
     let category_buttons;
     if (categories){
-        category_buttons = categories.trivia_categories.map(item => <button className='welcomeScreen__chooseMenu__button' key={item.id} data-id={item.id}>{item.name}</button>)
+        category_buttons = categories.trivia_categories.map(item => <button className={`welcomeScreen__chooseMenu__button ${Number(item.id) === Number(chosenCategory) ? 'welcomeScreen__chooseMenu__button--checked' : ''}`} key={item.id} data-id={item.id} onClick={chooseCategory}>{item.name}</button>)
     }
 
     return (
@@ -27,10 +25,11 @@ const WelcomeScreen = ({categories}) => {
                 </svg>
             </div>
             <div className='logo'></div>
+            <p className='categoryPick'>Choose Category</p>
             <div className='welcomeScreen__chooseMenu'>
                 {category_buttons}
             </div>
-            <button className='welcomeScreen__button'>Play</button>
+            <button className={chosenCategory ? 'welcomeScreen__button' : 'welcomeScreen__button--hidden'} disabled={chosenCategory ? false : true} >Play</button>
         </div>
     )
 }
