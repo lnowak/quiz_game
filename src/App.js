@@ -9,6 +9,7 @@ function App() {
 
   const [categories, setCategories] = useState(false);
   const [chosenCategory, setChosenCategory] = useState(false);
+  const [questions, setQuestions] = useState(false)
 
   useEffect(() => {
     fetch("https://opentdb.com/api_category.php")
@@ -19,7 +20,17 @@ function App() {
       setCategories(data)
     })
   }, [])
-
+  
+  useEffect(() => {
+    fetch(`https://opentdb.com/api.php?amount=10&category=${chosenCategory}&type=multiple`)
+    .then(resp => {
+      return resp.json();
+    })
+    .then(data => {
+      setQuestions(data)
+    })
+  }, [chosenCategory])
+  console.log(questions);
   return (
     <div className="App">
       <WelcomeScreen categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory}/>
