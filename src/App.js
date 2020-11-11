@@ -12,6 +12,7 @@ function App() {
   const [chosenCategory, setChosenCategory] = useState(false);
   const [questions, setQuestions] = useState(false)
   const [isScreenActive, setIsScreenActive] = useState(1);
+  const [score, setScore] = useState(0)
 
   useEffect(() => {
     fetch("https://opentdb.com/api_category.php")
@@ -39,7 +40,7 @@ function App() {
     <div className="App">
       <WelcomeScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive}/>
       <ChoiceScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
-      <MainScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} questions={questions} />
+      <MainScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} questions={questions} score={score} setScore={setScore}/>
     </div>
   );
 }

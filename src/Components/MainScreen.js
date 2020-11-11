@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 import QuestionArea from './QuestionArea'
 
-const MainScreen = ({isScreenActive, setIsScreenActive, questions}) => {
+const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setScore}) => {
 
     // console.log(questions.results)
 
@@ -11,7 +11,7 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions}) => {
     let quest;
     if (questions){
         quest = questions.results.map((item, index) => {
-            return <QuestionArea key={item.question} que={item} index={index} pageNo={pageNo} setPageNo={setPageNo} />
+            return <QuestionArea key={item.question} que={item} index={index} pageNo={pageNo} setPageNo={setPageNo} setIsScreenActive={setIsScreenActive} score={score} setScore={setScore}/>
         });
     }
 
@@ -28,6 +28,7 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions}) => {
                 </svg>
             </div>
             <div className='logo'></div>
+            <p>{score}</p>
             {quest}
         </div>
     )
