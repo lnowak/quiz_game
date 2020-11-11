@@ -1,18 +1,36 @@
 const QuestionArea = ({que, index, pageNo, setPageNo}) => {
 
-    // console.log(index, que)
     const encode = mystring => {
-        console.log(mystring)
-        return mystring.replace(/&quot;/g, /"/);
+        return mystring.replace(/&quot;/g, '"').replace(/&ldquo;/g, '"').replace(/&rdquo;/g, '"').replace(/&#039;/g, "'").replace(/&rsquo;/g, "'").replace(/&lsquo;/g, "'").replace(/&amp;/g, "&").replace(/&‌pi/g, "π").replace(/&shy;/g, "");
     }
-    encode(que.question);
-    console.log(que.question);
+    let question = encode(que.question);
+    console.log(question);
+
+    const answers = [que.correct_answer];
+    que.incorrect_answers.map(e => {
+        answers.push(e);
+        answers.sort();
+        return answers
+    });
+
+    const choseAnswer = e => {
+        if (e.target.innerText === que.correct_answer) {
+            console.log(e.target.innerText, que.correct_answer)
+        } else {
+            console.log(e.target.innerText, que.correct_answer)
+        }
+        setPageNo(() => pageNo + 1)
+    }
+
     return (
-        <div className={index === pageNo ? '' : 'hidden'}>
-            <p>{que.question}</p>
-            <p>{que.correct_answer}</p>
-            {que.incorrect_answers.map(e => <p>{e}</p>)}
-            <button onClick={() => setPageNo(pageNo + 1)} style={{height: '50px', width: '100px'}}>+</button>
+        <div className={index === pageNo ? 'questionsArea' : 'hidden'}>
+            <p className='questionsArea__question'>{question}</p>
+            <div className='questionsArea__answers'>
+                {answers.map(e => {
+                    encode(e)
+                    return <button key={e} className='questionsArea__answers__item' onClick={choseAnswer}>{e}</button>
+                })}
+            </div>
         </div>
     )
 }
