@@ -41,7 +41,7 @@ function App() {
     <div className="App">
       <WelcomeScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive}/>
       <ChoiceScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} categories={categories} setChosenCategory={setChosenCategory} chosenCategory={chosenCategory} />
-      <MainScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} questions={questions} score={score} setScore={setScore}/>
+      <MainScreen isScreenActive={isScreenActive} setIsScreenActive={setIsScreenActive} questions={questions} score={score} setScore={setScore} setChosenCategory={setChosenCategory}/>
     </div>
   );
 }

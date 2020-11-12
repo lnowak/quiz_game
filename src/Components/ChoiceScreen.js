@@ -24,7 +24,7 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
                 </svg>
             </div>
             <div className='logo'></div>
-            <p className={categories ? 'categoryPick' : 'hidden'}>Choose Category</p>
+            <p className={categories ? 'categoryPick' : 'hidden'}>Select a category</p>
             <div className={categories ? 'choiceScreen__chooseMenu' : 'hidden'}>
                 {category_buttons}
             </div>

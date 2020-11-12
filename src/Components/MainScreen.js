@@ -3,7 +3,7 @@ import {useState} from 'react';
 import QuestionArea from './QuestionArea'
 import ScoreScreen from './ScoreScreen'
 
-const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setScore}) => {
+const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setScore, setChosenCategory}) => {
 
     const [pageNo, setPageNo] = useState(0)
 
@@ -28,7 +28,7 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setSco
             </div>
             <div className='logo'></div>
             {quest}
-            <ScoreScreen pageNo={pageNo} setPageNo={setPageNo} score={score} setScore={setScore} />
+            <ScoreScreen setChosenCategory={setChosenCategory} pageNo={pageNo} setPageNo={setPageNo} score={score} setScore={setScore} setIsScreenActive={setIsScreenActive}/>
         </div>
     )
 }

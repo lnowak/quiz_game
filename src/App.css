@@ -81,7 +81,7 @@ path {
 text {
   fill: rgb(255, 255, 255);
   font-size: 72px;
-  text-shadow: -3px 6px 2px #3263e9;
+  text-shadow: -3px 6px 2px rgb(50, 99, 233);
 }
 
 .logo {
@@ -181,13 +181,15 @@ text {
 }
 
 .questionsArea__question {
-  height: 100px;
-  width: 100%;
+  height: 150px;
+  width: 80%;
   background-color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-bottom: 40px;
+  box-shadow: -3px 6px 2px  rgba(2, 29, 104, 0.788);
 }
 
 .questionsArea__answers {
@@ -202,4 +204,61 @@ text {
 .questionsArea__answers__item {
   height: 50px;
   width: 150px;
+  background-color: rgba(0, 0, 0, 0.397);
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.questionsArea__answers__item:hover {
+  background-color: rgba(0, 0, 0, 0.568);
+  color: rgb(255, 255, 255);
+}
+
+.correct {
+  background-color: rgba(0, 128, 0, 0.8);
+  height: 50px;
+  width: 150px;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.incorrect {
+  background-color: rgba(128, 128, 128, 0.8);
+  height: 50px;
+  width: 150px;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.scoreScreen__scoreArea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.scoreScreen__scoreArea p:last-of-type {
+  font-size: 100px;
+  animation: blinkingColors 4s infinite ease-in-out;
+}
+
+@keyframes blinkingColors {
+  0% {color: rgb(255, 255, 255);}
+  50% {color: rgb(0, 0, 0);}
+  100% {color: rgb(255, 255, 255);}
+}
+
+.scoreScreen__button {
+  background-color: rgba(0, 0, 0, 0.397);
+  outline-color:  rgba(6, 37, 173, 0.438);
+}
+
+.scoreScreen__button:hover {
+  background-color: rgba(0, 0, 0, 0.568);
+  color: rgb(255, 255, 255);
 }
