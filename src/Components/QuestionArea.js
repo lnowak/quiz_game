@@ -16,14 +16,13 @@ const QuestionArea = ({que, index, pageNo, setPageNo, setIsScreenActive, score, 
         if (e.target.dataset.id === que.correct_answer) {
             console.log(e.target.innerText, que.correct_answer, 'dobrze');
             setScore(() => score + 1)
-        } else {
-            console.log('zle')
         }
+        
         setPageNo(() => pageNo + 1)
-        if (pageNo === 9) {
-            setPageNo(0);
-            setIsScreenActive(() => 2)
-        }
+        // if (pageNo === 9) {
+        //     setPageNo(0);
+        //     setIsScreenActive(() => 2)
+        // }
     }
 
     return (
@@ -34,8 +33,8 @@ const QuestionArea = ({que, index, pageNo, setPageNo, setIsScreenActive, score, 
                     const answer = encode(e)
                     return <button key={e} data-id={e} className='questionsArea__answers__item' onClick={choseAnswer}>{answer}</button>
                 })}
-                <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo + 1)}>+</button>
-                <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo - 1)} >-</button>
+                {/* <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo + 1)}>+</button>
+                <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo - 1)} >-</button> */}
             </div>
         </div>
     )

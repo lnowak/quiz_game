@@ -1,10 +1,9 @@
 import {useState} from 'react';
 
 import QuestionArea from './QuestionArea'
+import ScoreScreen from './ScoreScreen'
 
 const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setScore}) => {
-
-    // console.log(questions.results)
 
     const [pageNo, setPageNo] = useState(0)
 
@@ -28,8 +27,8 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setSco
                 </svg>
             </div>
             <div className='logo'></div>
-            <p>{score}</p>
             {quest}
+            <ScoreScreen pageNo={pageNo} setPageNo={setPageNo} score={score} setScore={setScore} />
         </div>
     )
 }

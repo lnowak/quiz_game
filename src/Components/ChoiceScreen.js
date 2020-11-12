@@ -1,3 +1,5 @@
+import { CircleToBlockLoading } from 'react-loadingg';
+
 const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenActive, setIsScreenActive}) => {
 
     const chooseCategory = e => {
@@ -22,9 +24,12 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
                 </svg>
             </div>
             <div className='logo'></div>
-            <p className='categoryPick'>Choose Category</p>
-            <div className='choiceScreen__chooseMenu'>
+            <p className={categories ? 'categoryPick' : 'hidden'}>Choose Category</p>
+            <div className={categories ? 'choiceScreen__chooseMenu' : 'hidden'}>
                 {category_buttons}
+            </div>
+            <div className={categories ? 'hidden' : 'loading'} >
+                <CircleToBlockLoading color='white' />
             </div>
             <button className={chosenCategory ? 'choiceScreen__button button' : 'choiceScreen__button--hidden'} disabled={chosenCategory ? false : true} onClick={() => {setIsScreenActive(3)}}>Play</button>
         </div>

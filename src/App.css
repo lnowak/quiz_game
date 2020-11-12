@@ -159,6 +159,10 @@ text {
   outline: none;
 }
 
+.loading {
+  height: 250px;
+}
+
 .mainScreen {
   display: flex;
   justify-content: space-around;

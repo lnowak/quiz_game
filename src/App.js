@@ -22,8 +22,11 @@ function App() {
     .then(data => {
       setCategories(data)
     })
+    .catch(err => {
+      console.log(err)
+    })
   }, [])
-  
+
   useEffect(() => {
     fetch(`https://opentdb.com/api.php?amount=10&category=${chosenCategory}&type=multiple`)
     .then(resp => {
@@ -33,8 +36,6 @@ function App() {
       setQuestions(data)
     })
   }, [chosenCategory]);
-
-  // console.log(questions);
 
   return (
     <div className="App">
