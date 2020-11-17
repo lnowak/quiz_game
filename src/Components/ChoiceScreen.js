@@ -3,12 +3,20 @@ import { CircleToBlockLoading } from 'react-loadingg';
 const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenActive, setIsScreenActive}) => {
 
     const chooseCategory = e => {
-        setChosenCategory(e.target.dataset.id);
+        if(e.target.type === 'select-one') {
+            setChosenCategory(e.target.value);
+        } else {
+            setChosenCategory(e.target.dataset.id);
+        }
     }
 
     let category_buttons;
     if (categories){
         category_buttons = categories.trivia_categories.map(item => <button className={`choiceScreen__chooseMenu__button ${Number(item.id) === Number(chosenCategory) ? 'choiceScreen__chooseMenu__button--checked' : ''}`} key={item.id} data-id={item.id} onClick={chooseCategory}>{item.name}</button>)
+    }
+    let select_options;
+    if (categories){
+        select_options = categories.trivia_categories.map(item => <option className={`choiceScreen__chooseMenu__select ${Number(item.id) === Number(chosenCategory) ? 'choiceScreen__chooseMenu__button--checked' : ''}`} key={item.id} data-id={item.id} value={item.id} >{item.name}</option>)
     }
 
     return (
@@ -27,6 +35,7 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
             <p className={categories ? 'categoryPick' : 'hidden'}>Select a category</p>
             <div className={categories ? 'choiceScreen__chooseMenu' : 'hidden'}>
                 {category_buttons}
+                <select className='choiceScreen__chooseMenu__selectMenu' onChange={chooseCategory}>{select_options}</select>
             </div>
             <div className={categories ? 'hidden' : 'loading'} >
                 <CircleToBlockLoading color='white' />

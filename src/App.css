@@ -13,6 +13,14 @@
     height: 70px;
     width: 75%;
   }
+
+  .choiceScreen__chooseMenu__button {
+    display: none;
+  }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: block;
+  }
 }
 
 @media all and (min-width: 360px) and (max-width: 479px) {
@@ -22,6 +30,14 @@
   .button {
     height: 70px;
     width: 70%;
+  }
+
+  .choiceScreen__chooseMenu__button {
+    display: none;
+  }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: block;
   }
 }
 
@@ -44,11 +60,28 @@
   }
 
   .choiceScreen__chooseMenu__button {
-    width: 110px;
+    display: none;
+  }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: block;
   }
 }
 
 @media all and (min-width: 830px) and (max-width: 1000px) {
+
+  .welcomeScreen__name {
+    transform: scale(1.2);
+  }
+  
+  .welcome__logo {
+    transform: scale(1.2);
+  }
+
+  .button {
+    height: 70px;
+    width: 60%;
+  }
 
   .choiceScreen__chooseMenu {
     max-width: 760px;
@@ -56,6 +89,10 @@
 
   .choiceScreen__chooseMenu__button {
     width: 110px;
+  }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: none;
   }
 }
 
@@ -80,6 +117,10 @@
   .choiceScreen__chooseMenu__button {
     width: 130px;
   }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: none;
+  }
 }
 
 @media all and (min-width: 1200px) {
@@ -103,6 +144,10 @@
 
   .choiceScreen__chooseMenu__button {
     width: 150px;
+  }
+
+  .choiceScreen__chooseMenu__selectMenu {
+    display: none;
   }
 }
 
