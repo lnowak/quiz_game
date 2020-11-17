@@ -22,6 +22,10 @@
     display: block;
   }
 
+  .choiceScreen__button {
+    margin-bottom: 10%;
+  }
+
   .questionsArea {
     width: 95%;
   }
@@ -42,6 +46,10 @@
 
   .choiceScreen__chooseMenu__selectMenu {
     display: block;
+  }
+
+  .choiceScreen__button {
+    margin-bottom: 10%;
   }
 
   .questionsArea {
@@ -76,6 +84,10 @@
     display: block;
   }
 
+  .choiceScreen__button {
+    margin-bottom: 10%;
+  }
+
   .questionsArea {
     width: 460px;
   }
@@ -106,6 +118,10 @@
 
   .choiceScreen__chooseMenu__selectMenu {
     display: none;
+  }
+
+  .choiceScreen__button {
+    margin-bottom: 5%;
   }
 
   .questionsArea {
@@ -139,6 +155,10 @@
     display: none;
   }
 
+  .choiceScreen__button {
+    margin-bottom: 5%;
+  }
+
   .questionsArea {
     width: 650px;
   }
@@ -169,6 +189,10 @@
 
   .choiceScreen__chooseMenu__selectMenu {
     display: none;
+  }
+
+  .choiceScreen__button {
+    margin-bottom: 3%;
   }
 
   .questionsArea {
@@ -303,7 +327,6 @@ text {
 .choiceScreen__button {
   background-color: rgba(0, 0, 0, 0.397);
   outline-color:  rgba(6, 37, 173, 0.438);
-  margin-bottom: 50px;
   animation: appear 0.4s;
 }
 
@@ -425,7 +448,6 @@ text {
 .scoreScreen__button {
   background-color: rgba(0, 0, 0, 0.397);
   outline-color:  rgba(6, 37, 173, 0.438);
-  width: 100%;
 }
 
 .scoreScreen__button:hover {

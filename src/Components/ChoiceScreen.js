@@ -8,6 +8,9 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
         } else {
             setChosenCategory(e.target.dataset.id);
         }
+        if(e.target.value === 'none') {
+            setChosenCategory(false);
+        }
     }
 
     let category_buttons;
@@ -35,7 +38,10 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
             <p className={categories ? 'categoryPick' : 'hidden'}>Select a category</p>
             <div className={categories ? 'choiceScreen__chooseMenu' : 'hidden'}>
                 {category_buttons}
-                <select className='choiceScreen__chooseMenu__selectMenu' onChange={chooseCategory}>{select_options}</select>
+                <select className='choiceScreen__chooseMenu__selectMenu' onChange={chooseCategory}>
+                    <option selected={!chosenCategory ? true : false} value='none'>-</option>
+                    {select_options}
+                </select>
             </div>
             <div className={categories ? 'hidden' : 'loading'} >
                 <CircleToBlockLoading color='white' />
