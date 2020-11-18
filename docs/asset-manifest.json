@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2afd7556.chunk.css",
+    "main.js": "/static/js/main.6c44aa99.chunk.js",
+    "main.js.map": "/static/js/main.6c44aa99.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b3e1f562.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b3e1f562.js.map",
+    "static/js/2.92d83617.chunk.js": "/static/js/2.92d83617.chunk.js",
+    "static/js/2.92d83617.chunk.js.map": "/static/js/2.92d83617.chunk.js.map",
+    "static/js/3.ff47461a.chunk.js": "/static/js/3.ff47461a.chunk.js",
+    "static/js/3.ff47461a.chunk.js.map": "/static/js/3.ff47461a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2afd7556.chunk.css.map": "/static/css/main.2afd7556.chunk.css.map",
+    "static/js/2.92d83617.chunk.js.LICENSE.txt": "/static/js/2.92d83617.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/quiz-on-computer-with-question-signs-around.c89d78b9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b3e1f562.js",
+    "static/js/2.92d83617.chunk.js",
+    "static/css/main.2afd7556.chunk.css",
+    "static/js/main.6c44aa99.chunk.js"
+  ]
+}
