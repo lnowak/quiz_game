@@ -19,7 +19,7 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
     }
     let select_options;
     if (categories){
-        select_options = categories.trivia_categories.map(item => <option className={`choiceScreen__chooseMenu__select ${Number(item.id) === Number(chosenCategory) ? 'choiceScreen__chooseMenu__button--checked' : ''}`} key={item.id} data-id={item.id} value={item.id} >{item.name}</option>)
+        select_options = categories.trivia_categories.map(item => <option className={`choiceScreen__chooseMenu__select ${Number(item.id) === Number(chosenCategory) ? 'choiceScreen__chooseMenu__button--checked' : ''}`} selected={Number(chosenCategory) === Number(item.id) ? true : false} key={item.id} data-id={item.id} value={item.id} >{item.name}</option>)
     }
 
     return (
