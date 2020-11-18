@@ -4,14 +4,69 @@
   padding: 0;
 }
 
-@media all and (max-width: 359px) {
+@media all and (max-height: 640px) and (orientation: landscape) {
+  .rotated {
+    display: block;
+  }
+
+  .welcomeScreen {
+    display: none;
+  }
+
+  .mainScreen {
+    display: none;
+  }
+
+  .choiceScreen {
+    display: none;
+  }
+
+}
+
+@media all and (min-height: 640px) and (orientation: landscape) {
+  .rotated {
+    display: none;
+  }
+
+  .welcomeScreen {
+    display: flex;
+  }
+
+  .mainScreen {
+    display: flex;
+  }
+
+  .choiceScreen {
+    display: flex;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .rotated {
+    display: none;
+  }
+
+  .welcomeScreen {
+    display: flex;
+  }
+
+  .mainScreen {
+    display: flex;
+  }
+
+  .choiceScreen {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 359px){
   .welcomeScreen__name {
     transform: scale(0.8);
   }
   
   .button {
     height: 70px;
-    width: 75%;
+    width: 80%;
   }
 
   .choiceScreen__chooseMenu__button {
@@ -19,10 +74,15 @@
   }
 
   .choiceScreen__chooseMenu__selectMenu {
+    width: 80%;
     display: block;
   }
 
   .choiceScreen__button {
+    margin-bottom: 10%;
+  }
+
+  .choiceScreen__button--hidden {
     margin-bottom: 10%;
   }
 
@@ -45,10 +105,15 @@
   }
 
   .choiceScreen__chooseMenu__selectMenu {
+    width: 75%;
     display: block;
   }
 
   .choiceScreen__button {
+    margin-bottom: 10%;
+  }
+
+  .choiceScreen__button--hidden {
     margin-bottom: 10%;
   }
 
@@ -81,10 +146,15 @@
   }
 
   .choiceScreen__chooseMenu__selectMenu {
+    width: 350px;
     display: block;
   }
 
   .choiceScreen__button {
+    margin-bottom: 10%;
+  }
+
+  .choiceScreen__button--hidden {
     margin-bottom: 10%;
   }
 
@@ -124,41 +194,14 @@
     margin-bottom: 5%;
   }
 
-  .questionsArea {
-    width: 650px;
-  }
-}
-
- /* @media all and (min-width: 1000px) and (max-width: 1200px) {
-  .welcomeScreen__name {
-    transform: scale(1.5);
-  }
-  
-  .welcome__logo {
-    transform: scale(1.5);
-  }
-
-  .button {
-    height: 70px;
-    width: 400px;
-  }
-
-  .choiceScreen__chooseMenu__button {
-    width: 130px;
-  }
-
-  .choiceScreen__chooseMenu__selectMenu {
-    display: none;
-  }
-
-  .choiceScreen__button {
+  .choiceScreen__button--hidden {
     margin-bottom: 5%;
   }
 
   .questionsArea {
     width: 650px;
   }
-} */
+}
 
 @media all and (min-width: 1200px) {
   .welcomeScreen__name {
@@ -190,9 +233,18 @@
     margin-bottom: 3%;
   }
 
+  .choiceScreen__button--hidden {
+    margin-bottom: 3%;
+  }
+
   .questionsArea {
     width: 650px;
   }
+}
+
+.rotated {
+  font-size: 70px;
+  color: rgb(255, 255, 255);
 }
 
 .name {
@@ -218,7 +270,7 @@
   height: 100%;
   min-width: 320px;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -226,7 +278,9 @@
 }
 
 .screen__name {
-  height: 1px;
+  height: 35%;
+  margin-top: 15px;
+  margin-bottom: -240px;
 }
 
 .button {
@@ -249,14 +303,14 @@
 .choiceScreen {
   height: 100%;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
 .screen__name svg {
-  height: 50px;
+  height: 80%;
 }
 
 path {
@@ -275,11 +329,10 @@ text {
   width: 200px;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -15px;
+  margin-bottom: 20px;
 }
 
 .categoryPick {
-  margin: -40px 0 -40px 0;
   font-size: 30px;
   animation: pulse 3s ease-in-out infinite;
 }
@@ -293,9 +346,9 @@ text {
 .choiceScreen__chooseMenu {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  /* align-items: center; */
   width: 95%;
-  height: 350px;
+  height: 220px;
   flex-wrap: wrap;
 }
 
@@ -319,6 +372,11 @@ text {
   color: rgb(255, 255, 255);
 }
 
+.choiceScreen__chooseMenu__selectMenu {
+
+  height: 35px;
+}
+
 .choiceScreen__button {
   background-color: rgba(0, 0, 0, 0.397);
   outline-color:  rgba(6, 37, 173, 0.438);
@@ -336,7 +394,7 @@ text {
 }
 
 .choiceScreen__button--hidden {
-  height: 50px;
+  height: 70px;
   width: 250px;
   background: transparent;
   color: transparent;
@@ -349,7 +407,7 @@ text {
 }
 
 .mainScreen {
-  display: flex;
+  /* display: flex; */
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
