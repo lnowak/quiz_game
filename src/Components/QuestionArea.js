@@ -5,7 +5,7 @@ const QuestionArea = ({que, index, pageNo, setPageNo, score, setScore}) => {
     const [isCorrect, setIsCorrect] = useState(true)
 
     const encode = mystring => {
-        return mystring.replace(/&ouml;/g, 'o').replace(/&lrm;/g, '').replace(/&oacute;/g, 'o').replace(/&auml;/g, 'a').replace(/&quot;/g, '"').replace(/&ldquo;/g, '"').replace(/&rdquo;/g, '"').replace(/&euml;/g, "e").replace(/&hellip;/g, '...').replace(/&#039;/g, "'").replace(/&rsquo;/g, "'").replace(/&lsquo;/g, "'").replace(/&amp;/g, "&").replace(/&‌pi/g, "π").replace(/&shy;/g, "");
+        return mystring.replace(/&ouml;/g, 'o').replace(/&Ouml;/g, 'O').replace(/&atilde;/g, 'a').replace(/&uuml;/g, 'u').replace(/&lrm;/g, '').replace(/&oacute;/g, 'o').replace(/&auml;/g, 'a').replace(/&quot;/g, '"').replace(/&ldquo;/g, '"').replace(/&rdquo;/g, '"').replace(/&euml;/g, "e").replace(/&hellip;/g, '...').replace(/&#039;/g, "'").replace(/&rsquo;/g, "'").replace(/&lsquo;/g, "'").replace(/&amp;/g, "&").replace(/&‌pi/g, "π").replace(/&shy;/g, "");
     }
     let question = encode(que.question);
 
