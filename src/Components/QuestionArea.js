@@ -39,8 +39,6 @@ const QuestionArea = ({que, index, pageNo, setPageNo, score, setScore}) => {
                     const answer = encode(e)
                     return <button key={e} data-id={e} disabled={isCorrect ? false : true} className={`${e === que.correct_answer && !isCorrect ? 'correct': 'questionsArea__answers__item '}`} onClick={choseAnswer}>{answer}</button>
                 })}
-                {/* <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo + 1)}>+</button>
-                <button style={{height: '25px', width: '50px'}} onClick={() => setPageNo(() => pageNo - 1)} >-</button> */}
             </div>
         </div>
     )
