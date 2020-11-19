@@ -24,7 +24,7 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
 
     return (
         <div className={isScreenActive === 2 ? 'choiceScreen' : 'hidden'}>
-            <div className='screen__name'>
+            {/* <div className='screen__name'>
                 <svg viewBox="0 0 500 500">
                     <path id="curve" d="M72.2,148.6c4-6.1,65.5-6.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
                     <text className='lkl' width="500">
@@ -33,8 +33,8 @@ const ChoiceScreen = ({categories, setChosenCategory, chosenCategory, isScreenAc
                         </textPath>
                     </text>
                 </svg>
-            </div>
-            <div className='logo'></div>
+            </div> */}
+            <div className='logo screen__logo'></div>
             <p className={categories ? 'categoryPick' : 'hidden'}>Select a category</p>
             <div className={categories ? 'choiceScreen__chooseMenu' : 'hidden'}>
                 {category_buttons}

@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-@media all and (max-height: 640px) and (orientation: landscape) {
+@media all and (max-height: 600px) and (orientation: landscape) {
   .rotated {
     display: block;
   }
@@ -23,7 +23,7 @@
 
 }
 
-@media all and (min-height: 640px) and (orientation: landscape) {
+@media all and (min-height: 600px) and (orientation: landscape) {
   .rotated {
     display: none;
   }
@@ -63,6 +63,10 @@
   .welcomeScreen__name {
     transform: scale(0.8);
   }
+
+  .welcome__logo {
+    transform: scale(2.5);
+  }
   
   .button {
     height: 70px;
@@ -95,6 +99,11 @@
   .welcomeScreen__name {
     transform: scale(0.9);
   }
+
+  .welcome__logo {
+    transform: scale(2.2);
+  }
+
   .button {
     height: 70px;
     width: 70%;
@@ -129,17 +138,13 @@
   }
   
   .welcome__logo {
-    transform: scale(1.2);
+    transform: scale(2);
   }
 
   .button {
     height: 70px;
     width: 350px;
   }
-
-  /* .choiceScreen__chooseMenu {
-    max-width: 905px;
-  } */
 
   .choiceScreen__chooseMenu__button {
     display: none;
@@ -170,17 +175,13 @@
   }
   
   .welcome__logo {
-    transform: scale(1.2);
+    transform: scale(2);
   }
 
   .button {
     height: 70px;
     width: 400px;
   }
-
-  /* .choiceScreen__chooseMenu {
-    max-width: 760px;
-  } */
 
   .choiceScreen__chooseMenu__button {
     width: 110px;
@@ -209,7 +210,7 @@
   }
   
   .welcome__logo {
-    transform: scale(1.5);
+    transform: scale(2);
   }
 
   .button {
@@ -247,10 +248,6 @@
   color: rgb(255, 255, 255);
 }
 
-.name {
-  width: 400px;
-}
-
 .App {
   background-image: url(./images/backgroundNew.jpg);
   background-repeat: repeat;
@@ -268,19 +265,11 @@
 
 .welcomeScreen {
   height: 100%;
-  min-width: 320px;
   width: 100%;
-  /* display: flex; */
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding: 5% 0 5% 0;
-}
-
-.screen__name {
-  height: 35%;
-  margin-top: 15px;
-  margin-bottom: -240px;
 }
 
 .button {
@@ -309,8 +298,14 @@
   align-items: center;
 }
 
+.screen__name {
+  height: 35%;
+  margin-top: -55px;
+  margin-bottom: -190px;
+}
+
 .screen__name svg {
-  height: 80%;
+  height: 100%;
 }
 
 path {
@@ -325,11 +320,13 @@ text {
 
 .logo {
   background-image: url(./images/quiz-on-computer-with-question-signs-around.png);
-  height: 200px;
-  width: 200px;
+  height: 25%;
+  max-height: 175px;
+  width: 25%;
+  max-width: 175px;
   background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 20px;
+  background-size: contain;
+  background-position: center;
 }
 
 .categoryPick {
@@ -350,6 +347,12 @@ text {
   width: 95%;
   height: 220px;
   flex-wrap: wrap;
+}
+
+.screen__logo {
+  height: 175px;
+  width: 175px;
+  margin-top: 5%;
 }
 
 .choiceScreen__chooseMenu__button {

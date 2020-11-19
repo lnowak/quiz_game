@@ -16,7 +16,7 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setSco
 
     return (
         <div className={`${isScreenActive === 3 ? 'mainScreen' : 'hidden'}`}>
-            <div className='screen__name'>
+            {/* <div className='screen__name'>
                 <svg viewBox="0 0 500 500">
                     <path id="curve" d="M72.2,148.6c4-6.1,65.5-6.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" />
                     <text className='lkl' width="500">
@@ -25,8 +25,8 @@ const MainScreen = ({isScreenActive, setIsScreenActive, questions, score, setSco
                         </textPath>
                     </text>
                 </svg>
-            </div>
-            <div className='logo'></div>
+            </div> */}
+            <div className='logo screen__logo'></div>
             {quest}
             <ScoreScreen setChosenCategory={setChosenCategory} pageNo={pageNo} setPageNo={setPageNo} score={score} setScore={setScore} setIsScreenActive={setIsScreenActive}/>
         </div>
