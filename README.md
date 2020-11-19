@@ -12,13 +12,13 @@ Done
 
 ## Project Screen Shots
 
-ChoiceScreen - Desktop
+ChoiceScreen - Desktop  
 ![ChoiceScreen-Desktop](https://user-images.githubusercontent.com/51715910/99662209-3be72680-2a65-11eb-85e1-790ff62e4949.png)
 
-ChoiceScreen - Mobile
+ChoiceScreen - Mobile  
 ![ChoiceScreen-Mobile](https://user-images.githubusercontent.com/51715910/99662436-85377600-2a65-11eb-9313-5735e4a1820e.png)
 
-GameScreen - Desktop
+GameScreen - Desktop  
 ![GameScreen-Desktop](https://user-images.githubusercontent.com/51715910/99662491-9d0efa00-2a65-11eb-854a-8fa95eec8b5f.png)
 
 ## Installation and Setup Instructions
